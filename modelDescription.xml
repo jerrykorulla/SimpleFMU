@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription
+    fmiVersion="2.0"
+    modelName="MySimpleFMU"
+    guid="12345678-1234-1234-1234-123456789abc"
+    description="A simple FMU that doubles the input"
+    generationTool="Manual"
+    variableNamingConvention="flat">
+
+    <CoSimulation modelIdentifier="MySimpleFMU" canHandleVariableCommunicationStepSize="true"/>
+
+    <ModelVariables>
+        <ScalarVariable name="u" valueReference="0" causality="input" variability="continuous" initial="exact">
+            <Real start="0"/>
+        </ScalarVariable>
+        <ScalarVariable name="y" valueReference="1" causality="output" variability="continuous" initial="calculated">
+            <Real/>
+        </ScalarVariable>
+    </ModelVariables>
+
+    <ModelStructure>
+        <Outputs>
+            <Unknown index="2"/>
+        </Outputs>
+        <InitialUnknowns>
+            <Unknown index="2"/>
+        </InitialUnknowns>
+    </ModelStructure>
+
+</fmiModelDescription>
